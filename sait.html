@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Гайд по гигиене полости рта — Елена Сберегаева</title>
+
+  <meta
+    name="description"
+    content="Современный гайд по правильной гигиене полости рта от стоматолога-терапевта Елены Вадимовны Сберегаевой."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --bg: #f4f1eb;
+      --paper: #fbfaf7;
+      --black: #171716;
+      --muted: #77746d;
+      --line: rgba(23, 23, 22, 0.13);
+      --accent: #536f65;
+      --accent-light: #dce5df;
+      --white: #ffffff;
+
+      --radius: 28px;
+      --max: 1380px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--black);
+      font-family: "DM Sans", sans-serif;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--black);
+      color: var(--bg);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(calc(100% - 48px), var(--max));
+      margin: 0 auto;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 18px 0;
+      transition: 0.35s ease;
+    }
+
+    header.scrolled {
+      background: rgba(244, 241, 235, 0.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--black);
+      color: var(--bg);
+      display: grid;
+      place-items: center;
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      color: #4e4c47;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      transition: 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--black);
+    }
+
+    .nav-button {
+      border: 1px solid var(--black);
+      border-radius: 100px;
+      padding: 11px 17px;
+      font-size: 12px;
+      font-weight: 600;
+      background: transparent;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .nav-button:hover {
+      background: var(--black);
+      color: var(--bg);
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 100vh;
+      padding: 150px 0 65px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 1px;
+      background: var(--black);
+    }
+
+    .hero h1 {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(55px, 7.5vw, 115px);
+      line-height: 0.91;
+      letter-spacing: -0.075em;
+      font-weight: 700;
+      max-width: 850px;
+    }
+
+    .hero h1 em {
+      font-family: "Playfair Display", serif;
+      font-weight: 500;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-description {
+      max-width: 480px;
+      margin-top: 38px;
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    .hero-author {
+      margin-top: 42px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .author-avatar {
+      width: 49px;
+      height: 49px;
+      border-radius: 50%;
+      background:
+        linear-gradient(145deg, #b4c3bb, #647b70);
+      display: grid;
+      place-items: center;
+      color: white;
+      font-family: "Playfair Display", serif;
+      font-size: 19px;
+    }
+
+    .author-name {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .author-role {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 590px;
+    }
+
+    .hero-card {
+      position: absolute;
+      inset: 20px 0 20px 40px;
+      border-radius: 36px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 65% 25%, rgba(255,255,255,.8), transparent 22%),
+        linear-gradient(145deg, #dfe5df, #a9b9af);
+    }
+
+    /* Абстрактная стоматологическая композиция */
+
+    .tooth {
+      position: absolute;
+      width: 210px;
+      height: 270px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-8deg);
+      background: linear-gradient(145deg, #ffffff, #e9e7e0);
+      border-radius: 47% 53% 43% 48% / 35% 38% 62% 65%;
+      box-shadow:
+        25px 35px 50px rgba(55, 65, 59, .17),
+        inset -10px -12px 25px rgba(0,0,0,.05);
+    }
+
+    .tooth::before,
+    .tooth::after {
+      content: "";
+      position: absolute;
+      background: inherit;
+      width: 75px;
+      height: 125px;
+      bottom: -57px;
+      border-radius: 20% 80% 70% 30%;
+    }
+
+    .tooth::before {
+      left: 28px;
+      transform: rotate(8deg);
+    }
+
+    .tooth::after {
+      right: 28px;
+      transform: rotate(-8deg);
+    }
+
+    .hero-number {
+      position: absolute;
+      right: 28px;
+      top: 28px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+    }
+
+    .hero-caption {
+      position: absolute;
+      bottom: 34px;
+      left: 32px;
+      font-size: 12px;
+      color: rgba(23,23,22,.62);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    .scroll {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      color: var(--muted);
+    }
+
+    /* ================= SECTION ================= */
+
+    section {
+      padding: 130px 0;
+    }
+
+    .section-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--line);
+      padding-top: 17px;
+      margin-bottom: 65px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    .section-label span:last-child {
+      color: var(--muted);
+    }
+
+    .section-title {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(42px, 5.5vw, 78px);
+      line-height: .98;
+      letter-spacing: -.065em;
+      max-width: 850px;
+      margin-bottom: 65px;
+    }
+
+    .section-title em {
+      font-family: "Playfair Display", serif;
+      font-weight: 500;
+    }
+
+    /* ================= FOUR RULES ================= */
+
+    .rules {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .rule {
+      background: var(--bg);
+      min-height: 330px;
+      padding: 27px;
+      position: relative;
+      transition: .35s;
+    }
+
+    .rule:hover {
+      background: var(--paper);
+      transform: translateY(-5px);
+    }
+
+    .rule-number {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .rule h3 {
+      font-family: "Manrope", sans-serif;
+      font-size: 25px;
+      letter-spacing: -.04em;
+      margin-top: 80px;
+      margin-bottom: 17px;
+    }
+
+    .rule p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    .rule-icon {
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+    }
+
+    /* ================= QUOTE ================= */
+
+    .quote-section {
+      background: var(--black);
+      color: var(--bg);
+      padding: 150px 0;
+    }
+
+    .quote-wrap {
+      max-width: 1080px;
+      margin: auto;
+    }
+
+    .quote-mark {
+      font-family: "Playfair Display", serif;
+      font-size: 100px;
+      line-height: .4;
+      opacity: .3;
+    }
+
+    blockquote {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(36px, 5vw, 72px);
+      line-height: 1.03;
+      letter-spacing: -.06em;
+      margin-top: 25px;
+    }
+
+    .quote-author {
+      margin-top: 50px;
+      font-size: 13px;
+      color: rgba(244,241,235,.55);
+    }
+
+    /* ================= ROUTINE ================= */
+
+    .routine {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 100px;
+      align-items: start;
+    }
+
+    .routine-intro {
+      position: sticky;
+      top: 120px;
+    }
+
+    .routine-intro p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      max-width: 350px;
+    }
+
+    .steps {
+      border-top: 1px solid var(--line);
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 90px 1fr 30px;
+      align-items: center;
+      gap: 20px;
+      padding: 34px 0;
+      border-bottom: 1px solid var(--line);
+      cursor: pointer;
+      transition: .25s;
+    }
+
+    .step:hover {
+      padding-left: 12px;
+    }
+
+    .step-number {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .step h3 {
+      font-size: 27px;
+      letter-spacing: -.04em;
+    }
+
+    .step-arrow {
+      font-size: 22px;
+      transition: .3s;
+    }
+
+    .step:hover .step-arrow {
+      transform: translateX(5px);
+    }
+
+    /* ================= TOOTHBRUSH ================= */
+
+    .dark-section {
+      background: #dfe6e1;
+    }
+
+    .split-title {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: end;
+    }
+
+    .split-title p {
+      color: #5d625e;
+      line-height: 1.7;
+      max-width: 440px;
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 75px;
+    }
+
+    .choice {
+      background: rgba(255,255,255,.45);
+      border-radius: var(--radius);
+      padding: 35px;
+      min-height: 280px;
+      border: 1px solid rgba(23,23,22,.07);
+      transition: .35s;
+    }
+
+    .choice:hover {
+      background: rgba(255,255,255,.8);
+      transform: translateY(-6px);
+    }
+
+    .choice-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .16em;
+    }
+
+    .choice h3 {
+      font-family: "Manrope";
+      font-size: 32px;
+      letter-spacing: -.06em;
+      margin-top: 80px;
+      margin-bottom: 15px;
+    }
+
+    .choice p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* ================= MYTHS ================= */
+
+    .myths {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .myth {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 34px;
+      min-height: 290px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: .35s;
+    }
+
+    .myth:hover {
+      background: var(--paper);
+    }
+
+    .myth-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .myth-question {
+      font-family: "Manrope";
+      font-size: 27px;
+      line-height: 1.1;
+      letter-spacing: -.045em;
+      max-width: 600px;
+      margin-top: 50px;
+    }
+
+    .myth-answer {
+      position: absolute;
+      inset: 0;
+      background: var(--black);
+      color: var(--bg);
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: .45s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .myth.active .myth-answer {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .myth-answer strong {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      margin-bottom: 20px;
+    }
+
+    .myth-answer p {
+      font-size: 17px;
+      line-height: 1.6;
+      color: rgba(244,241,235,.72);
+      max-width: 600px;
+    }
+
+    /* ================= CHECKLIST ================= */
+
+    .check-section {
+      background: var(--black);
+      color: var(--bg);
+    }
+
+    .check-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 100px;
+    }
+
+    .check-description {
+      color: rgba(244,241,235,.55);
+      font-size: 15px;
+      line-height: 1.7;
+      max-width: 360px;
+      margin-top: 30px;
+    }
+
+    .checklist {
+      border-top: 1px solid rgba(244,241,235,.2);
+    }
+
+    .check {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 23px 0;
+      border-bottom: 1px solid rgba(244,241,235,.2);
+      cursor: pointer;
+      transition: .25s;
+    }
+
+    .check:hover {
+      padding-left: 10px;
+    }
+
+    .check-box {
+      width: 22px;
+      height: 22px;
+      border: 1px solid rgba(244,241,235,.5);
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      font-size: 11px;
+      transition: .25s;
+    }
+
+    .check.checked .check-box {
+      background: var(--bg);
+      color: var(--black);
+      border-color: var(--bg);
+    }
+
+    .check.checked .check-text {
+      opacity: .4;
+      text-decoration: line-through;
+    }
+
+    .check-text {
+      font-size: 17px;
+      transition: .25s;
+    }
+
+    /* ================= FINAL ================= */
+
+    .final {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+
+    .final-inner {
+      width: 100%;
+    }
+
+    .final h2 {
+      font-family: "Manrope";
+      font-size: clamp(55px, 9vw, 125px);
+      line-height: .87;
+      letter-spacing: -.075em;
+    }
+
+    .final h2 em {
+      font-family: "Playfair Display";
+      font-weight: 500;
+    }
+
+    .final-author {
+      margin: 60px auto 35px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .save-button {
+      border: 1px solid var(--black);
+      background: var(--black);
+      color: var(--bg);
+      padding: 16px 25px;
+      border-radius: 100px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .save-button:hover {
+      background: transparent;
+      color: var(--black);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 25px 0;
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* ================= ANIMATION ================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 900px) {
+
+      .container {
+        width: min(calc(100% - 32px), var(--max));
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .hero h1 {
+        font-size: clamp(55px, 16vw, 100px);
+      }
+
+      .hero-visual {
+        min-height: 470px;
+      }
+
+      .hero-card {
+        inset: 0;
+      }
+
+      .tooth {
+        width: 160px;
+        height: 210px;
+      }
+
+      .rules {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .rule {
+        min-height: 300px;
+      }
+
+      .routine,
+      .check-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .routine-intro {
+        position: static;
+      }
+
+      .split-title {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .choice-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .myths {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 90px 0;
+      }
+    }
+
+    @media (max-width: 560px) {
+
+      .nav-button {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-bottom: 90px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-visual {
+        min-height: 390px;
+      }
+
+      .hero-card {
+        border-radius: 25px;
+      }
+
+      .rules {
+        grid-template-columns: 1fr;
+      }
+
+      .rule {
+        min-height: 260px;
+      }
+
+      .rule h3 {
+        margin-top: 65px;
+      }
+
+      .section-title {
+        margin-bottom: 45px;
+      }
+
+      .step {
+        grid-template-columns: 45px 1fr 20px;
+      }
+
+      .step h3 {
+        font-size: 21px;
+      }
+
+      .myth {
+        min-height: 250px;
+      }
+
+      .myth-question {
+        font-size: 23px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header id="header">
+    <div class="container nav">
+
+      <a href="#" class="logo">
+        <span class="logo-mark">E</span>
+        <span>ELENA<br>SBEREGAEVA</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#basics">Основы</a>
+        <a href="#routine">Рутина</a>
+        <a href="#myths">Мифы</a>
+        <a href="#checklist">Чек-лист</a>
+      </nav>
+
+      <a href="#checklist" class="nav-button">
+        Мой уход →
+      </a>
+
+    </div>
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div class="hero-content reveal">
+
+          <div class="eyebrow">
+            Гайд стоматолога-терапевта
+          </div>
+
+          <h1>
+            Здоровые<br>
+            зубы — это<br>
+            <em>система.</em>
+          </h1>
+
+          <p class="hero-description">
+            Всё, что действительно нужно вашим зубам каждый день —
+            без мифов, лишних средств и сложных схем.
+          </p>
+
+          <div class="hero-author">
+
+            <div class="author-avatar">
+              Е
+            </div>
+
+            <div>
+              <div class="author-name">
+                Елена Вадимовна Сберегаева
+              </div>
+
+              <div class="author-role">
+                стоматолог-терапевт
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-visual reveal">
+
+          <div class="hero-card">
+
+            <div class="hero-number">
+              01 / 08
+            </div>
+
+            <div class="tooth"></div>
+
+            <div class="hero-caption">
+              oral care / everyday routine
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="scroll">
+        Scroll to explore ↓
+      </div>
+
+    </section>
+
+
+    <!-- ================= BASICS ================= -->
+
+    <section id="basics">
+
+      <div class="container">
+
+        <div class="section-label">
+          <span>01 / Основы</span>
+          <span>Главное</span>
+        </div>
+
+        <h2 class="section-title reveal">
+          Четыре простых правила,<br>
+          которые работают <em>каждый день.</em>
+        </h2>
+
+
+        <div class="rules">
+
+          <article class="rule reveal">
+
+            <span class="rule-number">01</span>
+
+            <div class="rule-icon">↗</div>
+
+            <h3>
+              2 раза<br>в день
+            </h3>
+
+            <p>
+              Чистите зубы утром и вечером
+              минимум две минуты.
+            </p>
+
+          </article>
+
+
+          <article class="rule reveal">
+
+            <span class="rule-number">02</span>
+
+            <div class="rule-icon">✦</div>
+
+            <h3>
+              Фтор —<br>союзник
+            </h3>
+
+            <p>
+              Фторсодержащая зубная паста
+              помогает укреплять эмаль
+              и снижать риск кариеса.
+            </p>
+
+          </article>
+
+
+          <article class="rule reveal">
+
+            <span class="rule-number">03</span>
+
+            <div class="rule-icon">↔</div>
+
+            <h3>
+              Между<br>зубами
+            </h3>
+
+            <p>
+              Щётка не очищает контактные
+              поверхности полностью.
+              Используйте нить или ёршики.
+            </p>
+
+          </article>
+
+
+          <article class="rule reveal">
+
+            <span class="rule-number">04</span>
+
+            <div class="rule-icon">○</div>
+
+            <h3>
+              Не забывайте<br>про язык
+            </h3>
+
+            <p>
+              Мягко очищайте поверхность
+              языка, не травмируя слизистую.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= QUOTE ================= -->
+
+    <section class="quote-section">
+
+      <div class="container quote-wrap reveal">
+
+        <div class="quote-mark">“</div>
+
+        <blockquote>
+          В гигиене важнее не количество
+          средств, а регулярность
+          и правильная техника.
+        </blockquote>
+
+        <div class="quote-author">
+          — Елена Вадимовна Сберегаева,
+          стоматолог-терапевт
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ROUTINE ================= -->
+
+    <section id="routine">
+
+      <div class="container">
+
+        <div class="section-label">
+          <span>02 / Routine</span>
+          <span>Ежедневный уход</span>
+        </div>
+
+
+        <div class="routine">
+
+          <div class="routine-intro reveal">
+
+            <h2 class="section-title">
+              Ваша<br>
+              <em>рутина.</em>
+            </h2>
+
+            <p>
+              Не нужно превращать уход за зубами
+              в сложный ритуал. Несколько правильных
+              действий — и вы готовы к новому дню.
+            </p>
+
+          </div>
+
+
+          <div class="steps reveal">
+
+            <div class="step">
+              <span class="step-number">01</span>
+
+              <h3>
+                Зубная щётка
+              </h3>
+
+              <span class="step-arrow">→</span>
+            </div>
+
+
+            <div class="step">
+              <span class="step-number">02</span>
+
+              <h3>
+                Межзубная гигиена
+              </h3>
+
+              <span class="step-arrow">→</span>
+            </div>
+
+
+            <div class="step">
+              <span class="step-number">03</span>
+
+              <h3>
+                Очистка языка
+              </h3>
+
+              <span class="step-arrow">→</span>
+            </div>
+
+
+            <div class="step">
+              <span class="step-number">04</span>
+
+              <h3>
+                Выплюнуть. Не полоскать.
+              </h3>
+
+              <span class="step-arrow">→</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= TOOTHBRUSH ================= -->
+
+    <section class="dark-section">
+
+      <div class="container">
+
+        <div class="section-label">
+          <span>03 / Щётка</span>
+          <span>Как выбрать</span>
+        </div>
+
+
+        <div class="split-title">
+
+          <h2 class="section-title reveal">
+            Щётка не должна быть
+            <em>жёсткой.</em>
+          </h2>
+
+          <p class="reveal">
+            Эффективность чистки определяется не силой,
+            с которой вы нажимаете на щётку, а правильной
+            техникой и регулярностью.
+          </p>
+
+        </div>
+
+
+        <div class="choice-grid">
+
+          <article class="choice reveal">
+
+            <span class="choice-tag">
+              MATERIAL
+            </span>
+
+            <h3>
+              SOFT
+            </h3>
+
+            <p>
+              Мягкая щетина — хороший выбор
+              для большинства людей.
+            </p>
+
+          </article>
+
+
+          <article class="choice reveal">
+
+            <span class="choice-tag">
+              FORM
+            </span>
+
+            <h3>
+              SMALL<br>HEAD
+            </h3>
+
+            <p>
+              Небольшая головка помогает
+              добраться до труднодоступных мест.
+            </p>
+
+          </article>
+
+
+          <article class="choice reveal">
+
+            <span class="choice-tag">
+              TECHNIQUE
+            </span>
+
+            <h3>
+              NO<br>PRESSURE
+            </h3>
+
+            <p>
+              Не нужно сильно давить.
+              Эффективность не равна силе нажима.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= MYTHS ================= -->
+
+    <section id="myths">
+
+      <div class="container">
+
+        <div class="section-label">
+          <span>04 / Мифы</span>
+          <span>Нажмите на карточку</span>
+        </div>
+
+        <h2 class="section-title reveal">
+          Пора оставить<br>
+          некоторые <em>мифы.</em>
+        </h2>
+
+
+        <div class="myths">
+
+          <article class="myth reveal">
+
+            <div class="myth-label">
+              Миф 01
+            </div>
+
+            <div class="myth-question">
+              «Если дёсны кровоточат —
+              нужно перестать пользоваться нитью?»
+            </div>
+
+            <div class="myth-answer">
+
+              <strong>Миф</strong>
+
+              <p>
+                Кровоточивость часто говорит
+                о воспалении дёсен и требует
+                внимания, а не отказа от гигиены.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="myth reveal">
+
+            <div class="myth-label">
+              Миф 02
+            </div>
+
+            <div class="myth-question">
+              «Профессиональная чистка
+              заменяет домашний уход?»
+            </div>
+
+            <div class="myth-answer">
+
+              <strong>Миф</strong>
+
+              <p>
+                Профессиональная гигиена дополняет
+                ежедневный уход, но не заменяет его.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="myth reveal">
+
+            <div class="myth-label">
+              Миф 03
+            </div>
+
+            <div class="myth-question">
+              «Чем сильнее я нажимаю
+              на щётку, тем лучше очищаю зубы?»
+            </div>
+
+            <div class="myth-answer">
+
+              <strong>Миф</strong>
+
+              <p>
+                Сильное давление может травмировать
+                дёсны и способствовать истиранию
+                тканей зуба. Важна техника.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="myth reveal">
+
+            <div class="myth-label">
+              Миф 04
+            </div>
+
+            <div class="myth-question">
+              «Если ничего не болит,
+              значит с зубами всё хорошо?»
+            </div>
+
+            <div class="myth-answer">
+
+              <strong>Миф</strong>
+
+              <p>
+                Многие стоматологические проблемы
+                на ранних этапах могут протекать
+                без выраженной боли.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CHECKLIST ================= -->
+
+    <section id="checklist" class="check-section">
+
+      <div class="container">
+
+        <div class="section-label"
+             style="border-color: rgba(244,241,235,.2);">
+
+          <span>05 / Checklist</span>
+          <span>Каждый день</span>
+
+        </div>
+
+
+        <div class="check-grid">
+
+          <div class="reveal">
+
+            <h2 class="section-title">
+              Мой<br>
+              <em>уход.</em>
+            </h2>
+
+            <p class="check-description">
+              Отметьте пункты, которые вы уже выполняете.
+              Ваша идеальная гигиена — это не десять
+              баночек в ванной, а несколько простых
+              привычек.
+            </p>
+
+          </div>
+
+
+          <div class="checklist reveal">
+
+            <div class="check">
+
+              <span class="check-box">✓</span>
+
+              <span class="check-text">
+                Чищу зубы 2 раза в день
+              </span>
+
+            </div>
+
+
+            <div class="check">
+
+              <span class="check-box">✓</span>
+
+              <span class="check-text">
+                Использую фторсодержащую пасту
+              </span>
+
+            </div>
+
+
+            <div class="check">
+
+              <span class="check-box">✓</span>
+
+              <span class="check-text">
+                Очищаю межзубные промежутки
+              </span>
+
+            </div>
+
+
+            <div class="check">
+
+              <span class="check-box">✓</span>
+
+              <span class="check-text">
+                Очищаю язык
+              </span>
+
+            </div>
+
+
+            <div class="check">
+
+              <span class="check-box">✓</span>
+
+              <span class="check-text">
+                Не давлю на щётку
+              </span>
+
+            </div>
+
+
+            <div class="check">
+
+              <span class="check-box">✓</span>
+
+              <span class="check-text">
+                Регулярно посещаю стоматолога
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FINAL ================= -->
+
+    <section class="final">
+
+      <div class="container final-inner reveal">
+
+        <h2>
+          Улыбка начинается<br>
+          не с <em>отбеливания.</em>
+        </h2>
+
+        <div class="final-author">
+          Елена Вадимовна Сберегаева<br>
+          стоматолог-терапевт
+        </div>
+
+        <button class="save-button" onclick="saveGuide()">
+          Сохранить гайд ↓
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <div class="container">
+
+    <footer>
+
+      <span>
+        © 2026 Елена Сберегаева
+      </span>
+
+      <span>
+        Гайд по гигиене полости рта
+      </span>
+
+    </footer>
+
+  </div>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    /* Header */
+
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 30) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+
+    });
+
+
+    /* Scroll animations */
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach((entry) => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("visible");
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach((element) => observer.observe(element));
+
+
+    /* Myth cards */
+
+    document
+      .querySelectorAll(".myth")
+      .forEach((card) => {
+
+        card.addEventListener("click", () => {
+
+          card.classList.toggle("active");
+
+        });
+
+      });
+
+
+    /* Checklist */
+
+    document
+      .querySelectorAll(".check")
+      .forEach((item) => {
+
+        item.addEventListener("click", () => {
+
+          item.classList.toggle("checked");
+
+        });
+
+      });
+
+
+    /* Save guide */
+
+    function saveGuide() {
+
+      window.print();
+
+    }
+
+  </script>
+
+</body>
+</html>
